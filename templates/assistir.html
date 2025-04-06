@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Assistir - {{ nome_arquivo }}</title></head>
+<body>
+    <h1>{{ nome_arquivo }}</h1>
+    <video width="640" height="360" controls>
+        <source src="{{ video_url }}" type="video/mp4">
+        Seu navegador não suporta vídeo.
+    </video><br>
+    <a href="/home">Voltar</a>
+</body>
+</html>
