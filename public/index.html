@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YoutuBaixa</title>
+  <link rel="stylesheet" href="/public/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="login" class="container">
+    <h1>Login no YoutuBaixa</h1>
+    <input type="email" id="email" placeholder="Seu email">
+    <input type="text" id="username" placeholder="Seu nome de usuário">
+    <p>Tem mais de 18 anos?</p>
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div id="main" class="container" style="display: none;">
+    <header>
+      <h1>YoutuBaixa</h1>
+      <div id="profile">
+        <img id="user-photo" src="" alt="Foto do usuário">
+        <input type="file" id="photo-file" accept="image/*">
+        <button onclick="uploadPhoto()">Atualizar Foto</button>
+      </div>
+    </header>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Pesquisar vídeos" onkeyup="searchVideos()">
+      <button onclick="showUpload()">+ Novo Vídeo</button>
+    </div>
+    <div id="video-list" class="video-grid"></div>
+  </div>
+
+  <div id="upload" class="container" style="display: none;">
+    <h2>Enviar Vídeo</h2>
+    <input type="text" id="video-title" placeholder="Título do vídeo">
+    <input type="file" id="video-file" accept="video/*">
+    <input type="file" id="thumbnail-file" accept="image/*">
+    <button onclick="uploadVideo()">Enviar</button>
+  </div>
+
+  <script src="/public/script.js"></script>
+</body>
+</html>

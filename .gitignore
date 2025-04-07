@@ -1,4 +1,6 @@
-videos/*
+node_modules/
+uploads/
+db.jsonvideos/*
 *.mp4
 *.mkv
 *.avi
