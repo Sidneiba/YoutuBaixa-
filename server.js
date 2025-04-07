@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
     res.end(JSON.stringify(data));
   };
 
-  const dbFile = 'db.json';
+  const dbFile = '/uploads/db.json';
   if (!fs.existsSync(dbFile)) {
     fs.writeFileSync(dbFile, JSON.stringify({ users: [], videos: [], votes: [] }));
   }
@@ -75,10 +75,11 @@ const server = http.createServer((req, res) => {
   if (req.url === '/upload' && req.method === 'POST') {
     console.log('Recebendo upload...');
     const form = formidable({
-      uploadDir: './uploads',
-      keepExtensions: true,
-      maxFileSize: 50 * 1024 * 1024
-    });
+      const form = formidable({
+  uploadDir: '/uploads',
+  keepExtensions: true,
+  maxFileSize: 50 * 1024 * 1024
+});
     form.parse(req, (err, fields, files) => {
       if (err) {
         console.log('Erro no formidable:', err.message);
@@ -114,7 +115,7 @@ const server = http.createServer((req, res) => {
 
   if (req.url === '/upload-photo' && req.method === 'POST') {
     const form = formidable({
-      uploadDir: './uploads',
+      uploadDir: '/uploads',
       keepExtensions: true,
       maxFileSize: 5 * 1024 * 1024
     });
